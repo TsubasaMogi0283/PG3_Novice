@@ -14,15 +14,15 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\Project">
+      <UniqueIdentifier>{7d5ebdde-fa72-4416-be40-0a7cb89d28ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\TextureManager.cpp">
-      <Filter>KamataEngine\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\KamataEngine\DirectXGame\scene\GameScene.cpp">
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\WinApp.cpp">
@@ -39,7 +39,13 @@
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
     <ClCompile Include="Scene\IScene.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\Project</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager\GameManager.cpp">
+      <Filter>KamataEngine\Project</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\KamataEngine\DirectXGame\scene\GameScene.cpp">
+      <Filter>KamataEngine\Project</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,9 +56,6 @@
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.h">
-      <Filter>KamataEngine\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
     <ClInclude Include="C:\KamataEngine\DirectXGame\input\Input.h">
@@ -114,8 +117,14 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
+    <ClInclude Include="GameManager\GameManager.h">
+      <Filter>KamataEngine\Project</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h">
+      <Filter>KamataEngine\Project</Filter>
+    </ClInclude>
     <ClInclude Include="Scene\IScene.h">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\Project</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
