@@ -11,4 +11,5 @@ int IScene::GetSceneNo() {
 
 IScene::~IScene() {
 
+
 }
