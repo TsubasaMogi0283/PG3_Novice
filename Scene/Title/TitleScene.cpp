@@ -12,8 +12,7 @@ void TitleScene::Initialize(GameManager* gamaManager) {
 }
 
 void TitleScene::Update(GameManager* gamaManager) {
-	Novice::ScreenPrintf(0, 0, "TitleScene"); 
-
+	
 
 
 	if (InputManager::GetInstance()->IsTriggerKey(DIK_SPACE) == true) {
@@ -22,7 +21,10 @@ void TitleScene::Update(GameManager* gamaManager) {
 }
 
 void TitleScene::Draw(GameManager* gamaManager) {
+	Novice::ScreenPrintf(0, 0, "TitleScene"); 
 
+
+	Novice::ScreenPrintf(600, 300, "Space To Start");
 }
 
 TitleScene::~TitleScene() {
