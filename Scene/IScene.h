@@ -1,35 +1,25 @@
 #pragma once
 
-enum SCENE {
-	TITLE,
-	STAGE,
-	CLEAR,
-};
-
+//å‰æ–¹å®£è¨€
+class GameManager;
 
 class IScene {
 public:
 
 
-	//‰Šú‰»
-	virtual void Initialize()=0;
+	//åˆæœŸåŒ–
+	virtual void Initialize(GameManager* gamaManager)=0;
 
-	//XV
-	virtual void Update()=0;
+	//æ›´æ–°
+	virtual void Update(GameManager* gamaManager)=0;
 
-	//•`‰æ
-	virtual void Draw()=0;
+	//æç”»
+	virtual void Draw(GameManager* gamaManager)=0;
 
-	//ƒfƒXƒgƒ‰ƒNƒ^
+	//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	virtual ~IScene();
 
 
-	//ƒV[ƒ“”Ô†‚ÌƒQƒbƒ^[
-	int GetSceneNo();
-
-
-protected:
-	static int sceneNo_;
 
 
 };

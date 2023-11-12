@@ -54,6 +54,9 @@
       <Filter>KamataEngine\Project</Filter>
     </ClCompile>
     <ClCompile Include="Scene\Clear\ClearScene.cpp">
+      <Filter>KamataEngine\Project</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\InputManager.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -142,6 +145,14 @@
     <ClInclude Include="Scene\Stage\StageScene.h">
       <Filter>KamataEngine\Project</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\Clear\ClearScene.h" />
+    <ClInclude Include="Scene\Clear\ClearScene.h">
+      <Filter>KamataEngine\Project</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputManager.h">
+      <Filter>KamataEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
 </Project>
