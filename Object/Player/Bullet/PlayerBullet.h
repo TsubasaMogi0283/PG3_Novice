@@ -1,20 +1,13 @@
 #pragma once
 #include "Vector2.h"
-#include <list>
 
-
-
-class Player {
+class PlayerBullet {
 public:
-	//初期化
-	Player();
+	//コンストラクタ
+	PlayerBullet();
 
 	//初期化
-	void Initialize();
-
-
-	//移動
-	void Move();
+	void Initialize(Vector2 position);
 
 	//更新
 	void Update();
@@ -23,10 +16,15 @@ public:
 	void Draw();
 
 	//デストラクタ
-	~Player();
+	~PlayerBullet();
 
-	Vector2 GetPosition() { 
-		return position_;
+	Vector2 GetRadius() { 
+		return radius_;
+	}
+
+	//アクセッサ
+	bool IsAlive() { 
+		return isAlive_;
 	}
 
 private:
@@ -37,6 +35,7 @@ private:
 	//半径
 	Vector2 radius_ = {};
 
+	bool isAlive_ = true;
 
 
 };

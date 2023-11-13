@@ -1,6 +1,8 @@
 #pragma once
 #include "IScene.h"
 #include "Object/Player/Player.h"
+#include <Object/Enemy/Enemy.h>
+#include "Object/Player/Bullet/PlayerBullet.h"
 
 class StageScene :public IScene{
 public:
@@ -23,6 +25,9 @@ public:
 
 private:
 	Player* player_ = nullptr;
+	Enemy* enemy_ = nullptr;
 
+
+	std::list<PlayerBullet*> bullets_;
 
 };

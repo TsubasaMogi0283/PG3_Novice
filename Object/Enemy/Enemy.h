@@ -1,20 +1,14 @@
 #pragma once
 #include "Vector2.h"
-#include <list>
 
-
-
-class Player {
+class Enemy {
 public:
+	
 	//初期化
-	Player();
+	Enemy();
 
 	//初期化
 	void Initialize();
-
-
-	//移動
-	void Move();
 
 	//更新
 	void Update();
@@ -23,11 +17,7 @@ public:
 	void Draw();
 
 	//デストラクタ
-	~Player();
-
-	Vector2 GetPosition() { 
-		return position_;
-	}
+	~Enemy();
 
 private:
 	//位置
@@ -36,7 +26,6 @@ private:
 	Vector2 move_ = {};
 	//半径
 	Vector2 radius_ = {};
-
 
 
 };
