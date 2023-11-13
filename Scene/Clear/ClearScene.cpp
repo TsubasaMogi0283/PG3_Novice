@@ -14,7 +14,7 @@ void ClearScene::Initialize(GameManager* gamaManager) {
 }
 
 void ClearScene::Update(GameManager* gamaManager) {
-	Novice::ScreenPrintf(0, 0, "ClearScene"); 
+	
 
 	if (InputManager::GetInstance()->IsTriggerKey(DIK_SPACE) == true) {
 		gamaManager->ChangeScene(new TitleScene());
@@ -23,9 +23,10 @@ void ClearScene::Update(GameManager* gamaManager) {
 }
 
 void ClearScene::Draw(GameManager* gamaManager) {
-
+	Novice::ScreenPrintf(0, 0, "ClearScene"); 
+	Novice::ScreenPrintf(600, 300, "Space To Title");
 }
 
 ClearScene::~ClearScene() {
-
+	
 }

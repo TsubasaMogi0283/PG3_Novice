@@ -30,4 +30,6 @@ private:
 
 	std::list<PlayerBullet*> bullets_;
 
+	float collisionDistance_ = 0.0f;
+
 };

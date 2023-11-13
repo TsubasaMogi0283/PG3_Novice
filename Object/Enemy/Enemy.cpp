@@ -29,9 +29,12 @@ void Enemy::Update() {
 
 //描画
 void Enemy::Draw() {
-	Novice::DrawEllipse(
+	if (isAlive_ == true) {
+		Novice::DrawEllipse(
 	    int(position_.x), int(position_.y), int(radius_.x), int(radius_.y), 0.0f, BLUE,
 	    kFillModeSolid);
+	}
+	
 }
 
 //デストラクタ

@@ -37,7 +37,30 @@ void StageScene::Update(GameManager* gamaManager) {
 
 	for (PlayerBullet* bullet : bullets_) {
 		bullet->Update();
+
+
+
+		//当たり判定
+		Vector2 distance = {
+		    enemy_->GetPosition().x - bullet->GetPosition().x,
+		    enemy_->GetPosition().y - bullet->GetPosition().y};
+		
+		collisionDistance_ = sqrtf(distance.x * distance.x + distance.y * distance.y);
+
+		if (collisionDistance_<enemy_->GetRadius().x+bullet->GetRadius().x) {
+			enemy_->SetIsAlive(false);
+		}
+
 	}
+
+	bullets_.remove_if([](PlayerBullet* bullet) {
+		if (bullet->IsAlive()==false) {
+			delete bullet;
+			return true;
+		}
+		return false;
+	});
+
 
 	if (InputManager::GetInstance()->IsTriggerKey(DIK_1) == true) {
 		gamaManager->ChangeScene(new ClearScene());
@@ -54,7 +77,13 @@ void StageScene::Draw(GameManager* gamaManager) {
 	
 	for (PlayerBullet* bullet : bullets_) {
 		bullet->Draw();
+	
+
+
 	}
+
+	
+
 
 }
 

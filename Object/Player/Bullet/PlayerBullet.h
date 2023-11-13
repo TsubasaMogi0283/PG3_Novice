@@ -18,6 +18,10 @@ public:
 	//デストラクタ
 	~PlayerBullet();
 
+	Vector2 GetPosition() { 
+		return position_;
+	}
+
 	Vector2 GetRadius() { 
 		return radius_;
 	}
