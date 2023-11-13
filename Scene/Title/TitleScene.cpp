@@ -7,20 +7,20 @@ TitleScene::TitleScene() {
 
 }
 
-void TitleScene::Initialize(GameManager* gamaManager) {
+void TitleScene::Initialize() {
 
 }
 
-void TitleScene::Update(GameManager* gamaManager) {
+void TitleScene::Update() {
 	
 
 
 	if (InputManager::GetInstance()->IsTriggerKey(DIK_SPACE) == true) {
-		gamaManager->ChangeScene(new StageScene());
+		sceneNo_ = STAGE;
 	}
 }
 
-void TitleScene::Draw(GameManager* gamaManager) {
+void TitleScene::Draw() {
 	Novice::ScreenPrintf(0, 0, "TitleScene"); 
 
 

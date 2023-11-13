@@ -9,20 +9,20 @@ ClearScene::ClearScene() {
 
 }
 
-void ClearScene::Initialize(GameManager* gamaManager) {
+void ClearScene::Initialize() {
 
 }
 
-void ClearScene::Update(GameManager* gamaManager) {
+void ClearScene::Update() {
 	
 
 	if (InputManager::GetInstance()->IsTriggerKey(DIK_SPACE) == true) {
-		gamaManager->ChangeScene(new TitleScene());
+		sceneNo_ = TITLE;
 	}
 
 }
 
-void ClearScene::Draw(GameManager* gamaManager) {
+void ClearScene::Draw() {
 	Novice::ScreenPrintf(0, 0, "ClearScene"); 
 	Novice::ScreenPrintf(600, 300, "Space To Title");
 }

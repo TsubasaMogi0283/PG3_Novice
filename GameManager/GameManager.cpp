@@ -1,59 +1,66 @@
 #include "GameManager.h"
 #include "Novice.h"
-#include "Input/InputManager.h"
 
 //コンストラクタ
-GameManager::GameManager() {
+GameManager::GameManager() { 
+	sceneArr_[TITLE] = std::make_unique<TitleScene>();
+	sceneArr_[STAGE] = std::make_unique<StageScene>();
+	sceneArr_[CLEAR] = std::make_unique<ClearScene>();
+
+
 	
-
 }
 
 
-
-void GameManager::ChangeScene(IScene* newGameScene) {
-	//一度消してから次のシーンにいく
-	delete currentGamaScene_;
-
-	currentGamaScene_ = newGameScene;
-	//今は言っているシーンが引数
-	currentGamaScene_->Initialize(this);
-}
 
 //この関数でゲームループを呼び出す
-void GameManager::Run() { 
-
+int GameManager::Run() { 
 
 	const char kWindowTitle[] = "LE2B_20_モギ_ツバサ";
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
+	gameManager = new GameManager();
 
-	GameManager* gameManager = new GameManager();
-	InputManager* inputManager_ = InputManager::GetInstance();
-
-	// キー入力結果を受け取る箱
-	char keys[256] = {0};
-	char preKeys[256] = {0};
-
-	currentGamaScene_ = new TitleScene();
-	currentGamaScene_->Initialize(this);
+	inputManager_ = InputManager::GetInstance();
 	inputManager_->Initialize();
+
+	
+	// キー入力結果を受け取る箱
+	//char keys[256] = {0};
+	//char preKeys[256] = {0};
+
+	//state_ = new TitleScene();
+	//state_->Initialize();
+	
 
 	while (Novice::ProcessMessage() == 0) {
 
 		Novice::BeginFrame();
 
 		// キー入力を受け取る
-		memcpy(preKeys, keys, 256);
-		Novice::GetHitKeyStateAll(keys);
+		//memcpy(preKeys, keys, 256);
+		//Novice::GetHitKeyStateAll(keys);
+
+		//シーンのチェック
+		preSceneNo_ = currentSceneNo_;
+		currentSceneNo_ = sceneArr_[currentSceneNo_]->GetSceneNo();
+
+		if (preSceneNo_ != currentSceneNo_) {
+			sceneArr_[currentSceneNo_]->Initialize();
+		}
+
+
 
 
 
 		//更新
 		inputManager_->Update();
-		currentGamaScene_->Update(this);
+		//state_->Update();
+		sceneArr_[currentSceneNo_]->Update();
 
 		//描画処理
-		currentGamaScene_->Draw(this);
+		//state_->Draw();
+		sceneArr_[currentSceneNo_]->Draw();
 
 		//フレームの終了
 		Novice::EndFrame();
@@ -66,13 +73,15 @@ void GameManager::Run() {
 		
 
 	}
-	// ライブラリの終了
-	Novice::Finalize();
+
+	return 0;
+	
 
 }
 
 
 //デストラクタ
 GameManager::~GameManager() {
-
+	// ライブラリの終了
+	Novice::Finalize();
 }

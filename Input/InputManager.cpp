@@ -1,6 +1,6 @@
 #include "InputManager.h"
 #include <cassert>
-#include <WinApp.h>
+
 
 //コンストラクタ
 InputManager::InputManager() {

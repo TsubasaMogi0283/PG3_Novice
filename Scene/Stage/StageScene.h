@@ -10,13 +10,13 @@ public:
 	StageScene();
 
 	//初期化
-	void Initialize(GameManager* gamaManager) override;
+	void Initialize() override;
 
 	//更新
-	void Update(GameManager* gamaManager) override;
+	void Update() override;
 
 	//描画
-	void Draw(GameManager* gamaManager) override;
+	void Draw() override;
 
 	//デストラクタ
 	~StageScene();

@@ -2,7 +2,7 @@
 
 //ここでDirectXInputのバージョン設定をする
 #define DIRECTINPUT_VERSION	0x0800
-
+#include "WinApp.h"
 #include <dinput.h>
 #include <Xinput.h>
 #include <wrl.h>

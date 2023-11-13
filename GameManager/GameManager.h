@@ -5,6 +5,8 @@
 #include "TitleScene.h"
 #include "ClearScene.h"
 
+#include "Input/InputManager.h"
+
 class GameManager {
 
 public:
@@ -12,20 +14,23 @@ public:
 	GameManager();
 
 
-	//シーンチェンジ
-	void ChangeScene(IScene* newGameScene);
-
 	//この関数でゲームループを呼び出す
-	void Run();
+	int Run();
 
 	
 	//デストラクタ
 	~GameManager();
 
 private:
+	GameManager* gameManager = nullptr;
+	InputManager* inputManager_ = nullptr;
+	//IScene* currentGamaScene_ = nullptr;
 
-	IScene* currentGamaScene_ = nullptr;
+	std::unique_ptr<IScene> sceneArr_[3];
 
+	int currentSceneNo_;
+	int preSceneNo_;
 
+	IScene* state_ = nullptr;
 
 };

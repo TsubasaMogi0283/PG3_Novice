@@ -8,7 +8,7 @@ StageScene::StageScene() {
 
 }
 
-void StageScene::Initialize(GameManager* gamaManager) { 
+void StageScene::Initialize() { 
 	player_ = new Player();
 	player_->Initialize();
 
@@ -16,7 +16,7 @@ void StageScene::Initialize(GameManager* gamaManager) {
 	enemy_->Initialize();
 }
 
-void StageScene::Update(GameManager* gamaManager) { 
+void StageScene::Update() { 
 	
 
 	//更新
@@ -63,11 +63,11 @@ void StageScene::Update(GameManager* gamaManager) {
 
 
 	if (InputManager::GetInstance()->IsTriggerKey(DIK_1) == true) {
-		gamaManager->ChangeScene(new ClearScene());
+		sceneNo_ = CLEAR;
 	}
 }
 
-void StageScene::Draw(GameManager* gamaManager) {
+void StageScene::Draw() {
 	Novice::ScreenPrintf(0, 0, "StageScene");
 
 	//プレイヤーの描画
