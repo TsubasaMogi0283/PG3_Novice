@@ -1,5 +1,6 @@
 #pragma once
 #include "IScene.h"
+#include "Object/Player/Player.h"
 
 class StageScene :public IScene{
 public:
@@ -21,7 +22,7 @@ public:
 
 
 private:
-
+	Player* player_ = nullptr;
 
 
 };
