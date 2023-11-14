@@ -18,6 +18,6 @@ void EnemyBlueState::Update(Enemy* enemy) {
 
 }
 
-void EnemyBlueState::Draw() { Novice::ScreenPrintf(0, 100, "Time:%d", stayTime_);
+void EnemyBlueState::Draw() { 
 
 }

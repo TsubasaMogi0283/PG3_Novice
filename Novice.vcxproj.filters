@@ -35,6 +35,15 @@
     <Filter Include="KamataEngine\Project\Enemy">
       <UniqueIdentifier>{04e65ac3-79f8-41bb-9951-355e72a6d130}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\Project\Player\Bullet">
+      <UniqueIdentifier>{0516bb08-b52e-4c74-95be-9a7eeb313c6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\Project\Enemy\Blue">
+      <UniqueIdentifier>{83f45436-ba10-4e43-98c1-13c296bfe3cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\Project\Enemy\RED">
+      <UniqueIdentifier>{b8fc1e63-337d-47f7-9eb7-d468d7af7899}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -83,17 +92,17 @@
     <ClCompile Include="Object\Enemy\IEnemy\IEnemy.cpp">
       <Filter>KamataEngine\Project\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="Object\Player\Bullet\PlayerBullet.cpp">
-      <Filter>KamataEngine\Project\Player</Filter>
-    </ClCompile>
     <ClCompile Include="Input\InputManager.cpp">
       <Filter>KamataEngine\Project</Filter>
     </ClCompile>
+    <ClCompile Include="Object\Player\Bullet\PlayerBullet.cpp">
+      <Filter>KamataEngine\Project\Player\Bullet</Filter>
+    </ClCompile>
     <ClCompile Include="Object\Enemy\BlueState\EnemyBlueState.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\Project\Enemy\Blue</Filter>
     </ClCompile>
     <ClCompile Include="Object\Enemy\RedState\EnemyRedState.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\Project\Enemy\RED</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -192,14 +201,18 @@
     <ClInclude Include="Object\Enemy\IEnemy\IEnemy.h">
       <Filter>KamataEngine\Project\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="Object\Player\Bullet\PlayerBullet.h">
-      <Filter>KamataEngine\Project\Player</Filter>
-    </ClInclude>
     <ClInclude Include="Input\InputManager.h">
       <Filter>KamataEngine\Project</Filter>
     </ClInclude>
-    <ClInclude Include="Object\Enemy\BlueState\EnemyBlueState.h" />
-    <ClInclude Include="Object\Enemy\RedState\EnemyRedState.h" />
+    <ClInclude Include="Object\Player\Bullet\PlayerBullet.h">
+      <Filter>KamataEngine\Project\Player\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy\BlueState\EnemyBlueState.h">
+      <Filter>KamataEngine\Project\Enemy\Blue</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy\RedState\EnemyRedState.h">
+      <Filter>KamataEngine\Project\Enemy\RED</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />

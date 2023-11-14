@@ -35,6 +35,8 @@ void StageScene::Update() {
 	}
 #pragma endregion
 
+#pragma region 当たり判定
+
 	for (PlayerBullet* bullet : bullets_) {
 		bullet->Update();
 
@@ -53,6 +55,8 @@ void StageScene::Update() {
 
 	}
 
+#pragma endregion
+
 	bullets_.remove_if([](PlayerBullet* bullet) {
 		if (bullet->IsAlive()==false) {
 			delete bullet;
@@ -61,8 +65,13 @@ void StageScene::Update() {
 		return false;
 	});
 
+	//クリアへ
+	if (enemy_->GetIsAlive() == false) {
+		bullets_.remove_if([](PlayerBullet* bullet) {
+		
+			return true;
+		});
 
-	if (InputManager::GetInstance()->IsTriggerKey(DIK_1) == true) {
 		sceneNo_ = CLEAR;
 	}
 }
