@@ -24,13 +24,11 @@ public:
 private:
 	GameManager* gameManager = nullptr;
 	InputManager* inputManager_ = nullptr;
-	//IScene* currentGamaScene_ = nullptr;
 
 	std::unique_ptr<IScene> sceneArr_[3];
 
 	int currentSceneNo_;
 	int preSceneNo_;
 
-	IScene* state_ = nullptr;
 
 };

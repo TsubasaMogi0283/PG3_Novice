@@ -1,5 +1,8 @@
 #pragma once
 #include "Vector2.h"
+#include "IEnemy/IEnemy.h"
+#include <memory>
+#include <Novice.h>
 
 class Enemy {
 public:
@@ -36,6 +39,9 @@ public:
 		return isAlive_;
 	}
 
+	void SetColor(unsigned int color) { 
+		this->color_ = color;
+	}
 
 private:
 	//位置
@@ -47,4 +53,10 @@ private:
 
 	bool isAlive_ = true;
 
+
+	std::unique_ptr<IEnemy> sceneArr_[2];
+	int currentSceneNo_=0;
+	int preSceneNo_=0;
+
+	unsigned int color_=BLUE;
 };

@@ -83,17 +83,17 @@
     <ClCompile Include="Object\Enemy\IEnemy\IEnemy.cpp">
       <Filter>KamataEngine\Project\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="Object\Enemy\AliveState\EnemyAliveState.cpp">
-      <Filter>KamataEngine\Project\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Object\Enemy\DeathState\EnemyDeathState.cpp">
-      <Filter>KamataEngine\Project\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Object\Player\Bullet\PlayerBullet.cpp">
       <Filter>KamataEngine\Project\Player</Filter>
     </ClCompile>
     <ClCompile Include="Input\InputManager.cpp">
       <Filter>KamataEngine\Project</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Enemy\BlueState\EnemyBlueState.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Enemy\RedState\EnemyRedState.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -192,18 +192,14 @@
     <ClInclude Include="Object\Enemy\IEnemy\IEnemy.h">
       <Filter>KamataEngine\Project\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="Object\Enemy\AliveState\EnemyAliveState.h">
-      <Filter>KamataEngine\Project\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Object\Enemy\DeathState\EnemyDeathState.h">
-      <Filter>KamataEngine\Project\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Object\Player\Bullet\PlayerBullet.h">
       <Filter>KamataEngine\Project\Player</Filter>
     </ClInclude>
     <ClInclude Include="Input\InputManager.h">
       <Filter>KamataEngine\Project</Filter>
     </ClInclude>
+    <ClInclude Include="Object\Enemy\BlueState\EnemyBlueState.h" />
+    <ClInclude Include="Object\Enemy\RedState\EnemyRedState.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />

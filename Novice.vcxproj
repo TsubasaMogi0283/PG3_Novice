@@ -118,10 +118,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="GameManager\GameManager.cpp" />
     <ClCompile Include="Input\InputManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Object\Enemy\AliveState\EnemyAliveState.cpp" />
-    <ClCompile Include="Object\Enemy\DeathState\EnemyDeathState.cpp" />
+    <ClCompile Include="Object\Enemy\BlueState\EnemyBlueState.cpp" />
     <ClCompile Include="Object\Enemy\Enemy.cpp" />
     <ClCompile Include="Object\Enemy\IEnemy\IEnemy.cpp" />
+    <ClCompile Include="Object\Enemy\RedState\EnemyRedState.cpp" />
     <ClCompile Include="Object\Player\Bullet\PlayerBullet.cpp" />
     <ClCompile Include="Object\Player\Player.cpp" />
     <ClCompile Include="Scene\Clear\ClearScene.cpp" />
@@ -159,10 +159,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="GameManager\GameManager.h" />
     <ClInclude Include="Input\InputManager.h" />
-    <ClInclude Include="Object\Enemy\AliveState\EnemyAliveState.h" />
-    <ClInclude Include="Object\Enemy\DeathState\EnemyDeathState.h" />
+    <ClInclude Include="Object\Enemy\BlueState\EnemyBlueState.h" />
     <ClInclude Include="Object\Enemy\Enemy.h" />
     <ClInclude Include="Object\Enemy\IEnemy\IEnemy.h" />
+    <ClInclude Include="Object\Enemy\RedState\EnemyRedState.h" />
     <ClInclude Include="Object\Player\Bullet\PlayerBullet.h" />
     <ClInclude Include="Object\Player\Player.h" />
     <ClInclude Include="Scene\Clear\ClearScene.h" />

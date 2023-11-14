@@ -78,8 +78,6 @@ void StageScene::Draw() {
 	for (PlayerBullet* bullet : bullets_) {
 		bullet->Draw();
 	
-
-
 	}
 
 	
