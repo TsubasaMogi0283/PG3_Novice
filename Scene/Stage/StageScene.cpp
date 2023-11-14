@@ -65,6 +65,7 @@ void StageScene::Update() {
 		return false;
 	});
 
+
 	//クリアへ
 	if (enemy_->GetIsAlive() == false) {
 		bullets_.remove_if([](PlayerBullet* bullet) {
