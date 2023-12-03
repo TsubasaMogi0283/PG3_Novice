@@ -1,9 +1,9 @@
 #include "ClearScene.h"
 #include "Input/InputManager.h"
 #include "Novice.h"
-#include <TitleScene.h>
+#include "Scene/Title/TitleScene.h"
 #include "GameManager/GameManager.h"
-#include "TitleScene.h"
+
 
 ClearScene::ClearScene() {
 
