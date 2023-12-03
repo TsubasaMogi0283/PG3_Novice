@@ -2,7 +2,7 @@
 
 //シーンの初期化
 //最初はタイトル
-int IScene::sceneNo_ = TITLE;
+int IScene::sceneNo_ = STAGE;
 
 //シーン番号のゲッター
 int IScene::GetSceneNo() { 

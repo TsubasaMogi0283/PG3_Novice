@@ -61,7 +61,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);C:\KamataEngine\DirectXGame\math;C:\KamataEngine\DirectXGame\2d;C:\KamataEngine\DirectXGame\3d;C:\KamataEngine\DirectXGame\audio;C:\KamataEngine\DirectXGame\base;C:\KamataEngine\DirectXGame\input;C:\KamataEngine\DirectXGame\scene;C:\KamataEngine\External\DirectXTex\include;C:\KamataEngine\External\imgui;C:\KamataEngine\Adapter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\KamataEngine\DirectXGame\math;C:\KamataEngine\DirectXGame\2d;C:\KamataEngine\DirectXGame\3d;C:\KamataEngine\DirectXGame\audio;C:\KamataEngine\DirectXGame\base;C:\KamataEngine\DirectXGame\input;C:\KamataEngine\DirectXGame\scene;C:\KamataEngine\External\DirectXTex\include;C:\KamataEngine\External\imgui;C:\KamataEngine\Adapter;%(AdditionalIncludeDirectories);$(ProjectDir)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -86,7 +86,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Scene;C:\KamataEngine\DirectXGame\math;C:\KamataEngine\DirectXGame\2d;C:\KamataEngine\DirectXGame\3d;C:\KamataEngine\DirectXGame\audio;C:\KamataEngine\DirectXGame\base;C:\KamataEngine\DirectXGame\input;C:\KamataEngine\DirectXGame\scene;C:\KamataEngine\External\DirectXTex\include;C:\KamataEngine\Adapter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Scene;C:\KamataEngine\DirectXGame\math;C:\KamataEngine\DirectXGame\2d;C:\KamataEngine\DirectXGame\3d;C:\KamataEngine\DirectXGame\audio;C:\KamataEngine\DirectXGame\base;C:\KamataEngine\DirectXGame\input;C:\KamataEngine\DirectXGame\scene;C:\KamataEngine\External\DirectXTex\include;C:\KamataEngine\Adapter;%(AdditionalIncludeDirectories);$(ProjectDir)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <Optimization>MinSpace</Optimization>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -118,7 +118,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="GameManager\GameManager.cpp" />
     <ClCompile Include="Input\InputManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Scene\Clear\ClearScene.cpp" />
     <ClCompile Include="Scene\IScene.cpp" />
+    <ClCompile Include="Scene\Stage\StageScene.cpp" />
+    <ClCompile Include="Scene\Title\TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Input\Mouse\MouseInformation.h" />
@@ -152,7 +155,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="GameManager\GameManager.h" />
     <ClInclude Include="Input\InputManager.h" />
     <ClInclude Include="Input\Mouse\MouseInformation.h" />
+    <ClInclude Include="Scene\Clear\ClearScene.h" />
     <ClInclude Include="Scene\IScene.h" />
+    <ClInclude Include="Scene\Stage\StageScene.h" />
+    <ClInclude Include="Scene\Title\TitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

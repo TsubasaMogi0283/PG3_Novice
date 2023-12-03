@@ -2,7 +2,7 @@
 #include "Input/InputManager.h"
 #include "Novice.h"
 #include "GameManager/GameManager.h"
-#include "ClearScene.h"
+
 
 StageScene::StageScene() {
 
@@ -12,8 +12,6 @@ void StageScene::Initialize() {
 	player_ = new Player();
 	player_->Initialize();
 
-	enemy_ = new Enemy();
-	enemy_->Initialize();
 }
 
 void StageScene::Update() { 
