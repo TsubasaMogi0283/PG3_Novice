@@ -16,9 +16,6 @@ void ClearScene::Initialize() {
 void ClearScene::Update() {
 	
 
-	if (InputManager::GetInstance()->IsTriggerKey(DIK_SPACE) == true) {
-		sceneNo_ = TITLE;
-	}
 
 }
 
