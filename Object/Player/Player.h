@@ -14,7 +14,13 @@ public:
 
 
 	//移動
-	void Move();
+	//void Move();
+
+	//今まであったMoveを細かくする
+	//キーごとにコマンドを作る
+	void MoveRight();
+	void MoveLeft();
+
 
 	//更新
 	void Update();

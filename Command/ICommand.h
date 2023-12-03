@@ -8,7 +8,7 @@ public:
 
 	virtual void Exec(Player& player) = 0;
 
-	virtual ~ICommand();
+	virtual ~ICommand(){};
 
 
 private:

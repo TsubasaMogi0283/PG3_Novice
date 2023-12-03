@@ -116,8 +116,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
     <ClCompile Include="Command\ICommand.cpp" />
+    <ClCompile Include="Command\MoveLeftCommand\MoveLeftCommand.cpp" />
     <ClCompile Include="Command\MoveRightCommand\MoveRightCommand.cpp" />
     <ClCompile Include="GameManager\GameManager.cpp" />
+    <ClCompile Include="InputHandler\InputHandler.cpp" />
     <ClCompile Include="Input\InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object\Player\Player.cpp" />
@@ -155,8 +157,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="Command\ICommand.h" />
+    <ClInclude Include="Command\MoveLeftCommand\MoveLeftCommand.h" />
     <ClInclude Include="Command\MoveRightCommand\MoveRightCommand.h" />
     <ClInclude Include="GameManager\GameManager.h" />
+    <ClInclude Include="InputHandler\InputHandler.h" />
     <ClInclude Include="Input\InputManager.h" />
     <ClInclude Include="Input\Mouse\MouseInformation.h" />
     <ClInclude Include="Object\Player\Player.h" />

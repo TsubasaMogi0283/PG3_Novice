@@ -14,37 +14,23 @@ void Player::Initialize() {
 
 
 //移動
-void Player::Move() {
-	//右
-	if ((InputManager::GetInstance()->IsPushKey(DIK_D) == true)||
-		(InputManager::GetInstance()->IsPushKey(DIK_RIGHT) == true)) {
-		position_.x += move_.x;
-	}
-	//左
-	if ((InputManager::GetInstance()->IsPushKey(DIK_A) == true)||
-		(InputManager::GetInstance()->IsPushKey(DIK_LEFT) == true)) {
-		position_.x -= move_.x;
-	}
-	//上
-	if ((InputManager::GetInstance()->IsPushKey(DIK_W) == true)||
-		(InputManager::GetInstance()->IsPushKey(DIK_UP) == true)) {
-		position_.y -= move_.y;
-	}
-	//下
-	if ((InputManager::GetInstance()->IsPushKey(DIK_S) == true)||
-		(InputManager::GetInstance()->IsPushKey(DIK_DOWN) == true)) {
-		position_.y += move_.y;
-	}
+
+void Player::MoveRight() {
+	this->position_.x += move_.x;
+	Novice::ScreenPrintf(0, 0, "Right");
 }
 
+
+void Player::MoveLeft() {
+	this->position_.x -= move_.x;
+
+	Novice::ScreenPrintf(0, 0, "Left");
+}
 
 void Player::Update() {
 
 	//移動
-	Move();
-
-
-	
+	//Move();
 
 
 }

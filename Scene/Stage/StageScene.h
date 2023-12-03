@@ -1,6 +1,7 @@
 #pragma once
 #include "Scene/IScene.h"
 #include "Object/Player/Player.h"
+#include <InputHandler/InputHandler.h>
 
 class StageScene :public IScene{
 public:
@@ -24,6 +25,8 @@ public:
 private:
 	Player* player_ = nullptr;
 
+	ICommand* command_ = nullptr;
+	InputHandler* inputHandler_ = nullptr;
 
 	float collisionDistance_ = 0.0f;
 

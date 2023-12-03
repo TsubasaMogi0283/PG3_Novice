@@ -12,10 +12,25 @@ void StageScene::Initialize() {
 	player_ = new Player();
 	player_->Initialize();
 
+	inputHandler_ = new InputHandler();
+
+	//初期化の時に割り当てる
+	//AssignCommand
+	inputHandler_->AssignMoveRightCommandToPressKeyD();
+	inputHandler_->AssignMoveLeftCommandToPressKeyA();
+
+
 }
 
 void StageScene::Update() { 
 	
+
+	command_ = inputHandler_->HandleInput();
+
+	//SetCommand
+	if (this->command_) {
+		command_->Exec(*player_);
+	}
 
 	//更新
 	player_->Update();
