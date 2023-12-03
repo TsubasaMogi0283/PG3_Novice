@@ -1,10 +1,10 @@
 #include "IScene.h"
 
-//ƒV[ƒ“‚Ì‰Šú‰»
-//Å‰‚Íƒ^ƒCƒgƒ‹
+//ã‚·ãƒ¼ãƒ³ã®åˆæœŸåŒ–
+//æœ€åˆã¯ã‚¿ã‚¤ãƒˆãƒ«
 int IScene::sceneNo_ = TITLE;
 
-//ƒV[ƒ“”Ô†‚ÌƒQƒbƒ^[
+//ã‚·ãƒ¼ãƒ³ç•ªå·ã®ã‚²ãƒƒã‚¿ãƒ¼
 int IScene::GetSceneNo() { 
 	return sceneNo_; 
 }

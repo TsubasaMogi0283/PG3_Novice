@@ -11,20 +11,20 @@ class IScene {
 public:
 
 
-	//‰Šú‰»
+	//åˆæœŸåŒ–
 	virtual void Initialize()=0;
 
-	//XV
+	//æ›´æ–°
 	virtual void Update()=0;
 
-	//•`‰æ
+	//æç”»
 	virtual void Draw()=0;
 
-	//ƒfƒXƒgƒ‰ƒNƒ^
+	//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	virtual ~IScene();
 
 
-	//ƒV[ƒ“”Ô†‚ÌƒQƒbƒ^[
+	//ã‚·ãƒ¼ãƒ³ç•ªå·ã®ã‚²ãƒƒã‚¿ãƒ¼
 	int GetSceneNo();
 
 
