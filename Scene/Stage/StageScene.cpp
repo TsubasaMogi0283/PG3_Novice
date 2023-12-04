@@ -18,7 +18,8 @@ void StageScene::Initialize() {
 	//AssignCommand
 	inputHandler_->AssignMoveRightCommandToPressKeyD();
 	inputHandler_->AssignMoveLeftCommandToPressKeyA();
-
+	inputHandler_->AssignMoveUpCommandToPressKeyW();
+	inputHandler_->AssignMoveDownCommandToPressKeyS();
 
 }
 

@@ -18,8 +18,14 @@ public:
 
 	//今まであったMoveを細かくする
 	//キーごとにコマンドを作る
+	//右
 	void MoveRight();
+	//左
 	void MoveLeft();
+	//上
+	void MoveUp();
+	//下
+	void MoveDown();
 
 
 	//更新

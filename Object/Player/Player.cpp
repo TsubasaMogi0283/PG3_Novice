@@ -4,6 +4,7 @@
 #include "Bullet/PlayerBullet.h"
 
 Player::Player() {
+
 }
 
 void Player::Initialize() {
@@ -17,14 +18,24 @@ void Player::Initialize() {
 
 void Player::MoveRight() {
 	this->position_.x += move_.x;
-	Novice::ScreenPrintf(0, 0, "Right");
+	Novice::ScreenPrintf(0, 30, "Right");
 }
 
 
 void Player::MoveLeft() {
 	this->position_.x -= move_.x;
+	Novice::ScreenPrintf(0, 30, "Left");
+}
 
-	Novice::ScreenPrintf(0, 0, "Left");
+//上
+void Player::MoveUp() {
+	this->position_.y -= move_.y;
+	Novice::ScreenPrintf(0, 30, "Up");
+}
+//下
+void Player::MoveDown() {
+	this->position_.y += move_.y;
+	Novice::ScreenPrintf(0, 30, "Down");
 }
 
 void Player::Update() {
