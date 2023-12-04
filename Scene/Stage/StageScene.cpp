@@ -25,7 +25,6 @@ void StageScene::Initialize() {
 
 void StageScene::Update() { 
 	
-
 	command_ = inputHandler_->HandleInput();
 
 	//SetCommand
